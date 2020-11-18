@@ -9,7 +9,7 @@
 puts 'first destroy'
 Ingredient.destroy_all
 Cocktail.destroy_all
-Dose.destroy_all
+
 puts 'destroying all'
 
 ingone = Ingredient.create(name: "lime juice")

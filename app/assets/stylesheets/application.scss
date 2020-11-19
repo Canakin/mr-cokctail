@@ -5,8 +5,8 @@
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
-//@import "font-awesome-sprockets";
-//@import "font-awesome";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 // Your CSS partials
 @import "components/index";
@@ -14,4 +14,21 @@
 
 h4 {
   text-align:center;
+}
+
+#icons {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width:10%;
+}
+
+#animation {
+  animation-name: myfirst;
+  animation-duration: 4s;
+}
+
+@keyframes myfirst {
+  from {color:#F0F8FF;}
+  to {color:#F0FFFF;}
 }

@@ -1,2 +1,32 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.cockt_name {
+  font-family:'Arial Black';
+  text-shadow:2px 2px 2px black;
+  font-size:30px;
+}
+
+#cockt_card {
+  background-image: linear-gradient(#F8F8FF, #FFFFF0);
+  border-radius: 30%;
+  margin-bottom:25px;
+}
+
+#create_link {
+  border:1px solid gray;
+  width:180px;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+  padding:auto;
+  border-radius:50%;
+  background-color: #5F9EA0;
+}
+
+#create_para {
+  text-align: center;
+  font-size: 20px;
+  color:white;
+}
+

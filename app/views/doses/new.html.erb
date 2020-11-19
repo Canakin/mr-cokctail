@@ -1,7 +1,12 @@
+<h3>Please create the dose of the ingredient below:</h3>
 <div>
-  <%= simple_form_for [@cocktail, @dose] do f %>
+  <%= simple_form_for [:cocktail_id, @dose], url: cocktail_doses_path do |f| %>
     <%= f.association :ingredient, input_html: { class: "beautiful-dropdown"}, include_hidden: false %>
     <%= f.input :description %>
     <%= f.button :submit, class:'btn btn-primary' %>
   <% end %>
+</div>
+
+<div>
+  <p><%= link_to 'Main Page', cocktails_path %></p>
 </div>

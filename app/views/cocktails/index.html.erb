@@ -1,24 +1,14 @@
-<h2 style='text-align:center; margin-bottom: 30px;'>Best Cocktails</h2>
-
-<div class='container'>
+<h2 style="text-align:center; margin-bottom: 30px; font-family: 'Noto Serif', serif; text-shadow: 2px 2px 2px gray; color:#F0FFF0; font-size:50px;">Best Cocktails</h2>
+<p style='color:black'>You can see the best known cocktails below and see the details of the cocktail by clicking on a cocktail. Enjoy the ride!</p>
 <% @cocktails.each do |cocktail|  %>
-  <div class='card'>
-    <p style="font_family:'Arial Black'"><%=link_to "#{cocktail.name}", cocktail_path(cocktail)%></p>
-    <% if cocktail.name == 'Mojito' %>
-      <%= image_tag("https://res.cloudinary.com/ds2odybte/image/upload/v1605617775/Can%20Photos/mojito_rozvpv.jpg", id:'cock_img') %>
-    <% elsif cocktail.name == 'Bloody Mary' %>
-      <%= image_tag("https://res.cloudinary.com/ds2odybte/image/upload/v1605618902/Can%20Photos/Bloody_Mary_jpg8vy.jpg", id:'cock_img') %>
-    <% elsif cocktail.name == 'Sex on the beach' %>
-      <%= image_tag("https://res.cloudinary.com/ds2odybte/image/upload/v1605619278/Can%20Photos/Sex_on_the_beach_zs4dtz.jpg", id:'cock_img') %>
-    <% elsif cocktail.name == 'Margarita' %>
-      <%= image_tag("https://res.cloudinary.com/ds2odybte/image/upload/v1605619757/Can%20Photos/Margarita_ay3zjy.jpg", id:'cock_img') %>
-    <% elsif cocktail.name == 'Pina Colada' %>
-      <%= image_tag("https://res.cloudinary.com/ds2odybte/image/upload/v1605619839/Can%20Photos/Pina_Collada_fs5qch.jpg", id:'cock_img') %>
-    <% end  %>
+  <div class='card' id='cockt_card'>
+    <p class='cockt_name'><%=link_to "#{cocktail.name}", cocktail_path(cocktail)%></p>
+    <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill,id:'cock_img' %>
+    <br>
   </div>
 <% end %>
-  <div>
-    <%= link_to 'Create a new cocktail', new_cocktail_path %>
+  <div id='create_link'>
+    <p><%= link_to 'Create a new cocktail', new_cocktail_path, id:'create_para' %></p>
   </div>
 </div>
 

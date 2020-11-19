@@ -1,9 +1,21 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class:'btn btn-primary' %>
-<% end  %>
-<div>
-  <%= link_to 'Main Page', cocktails_path %>
+<h2>Create you own cocktail!</h2>
+
+<div class='container'>
+  <div class='card' id='round_pic'>
+    <%= image_tag ('https://res.cloudinary.com/ds2odybte/image/upload/v1605700829/cocktails_pic_round_lxrmfr.jpg') %>
+  </div>
 </div>
+
+<div class='container'>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, class:'btn btn-primary' %>
+  <% end  %>
+</div>
+
+<div style='text-align:center; margin-top: 25px; margin-bottom:25px;'>
+  <%= link_to 'Return to Main Page', cocktails_path%>
+</div>
+
 

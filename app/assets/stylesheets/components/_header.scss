@@ -4,23 +4,44 @@ h1 {
   margin-top:auto;
   margin-bottom:35px;
   padding-bottom:30px;
-  text-shadow:2px 2px 2px gray;
+  text-shadow:3px 3px 3px black;
   color:#F0F8FF;
 }
 
 .header {
   background-image: url('https://res.cloudinary.com/ds2odybte/image/upload/v1605616588/Can%20Photos/cocktail_header_au7rnd.jpg');
-  margin-bottom:60px;
+  margin-bottom:30px;
+  padding-bottom:20px;
+  opacity:70%;
 }
 
 h3 {
   text-align:center;
-  text-shadow:2px 2px 2px gray;
+  text-shadow:2px 2px 2px black;
   color:#F0F8FF;
 }
 
 h2 {
   text-align:center;
-  text-shadow:2px 2px 2px gray;
+  text-shadow:2px 2px 2px black;
   color:#F0F8FF;
+}
+
+#top {
+  text-align:center;
+  margin-bottom: 30px;
+  font-family: 'Noto Serif', serif;
+  text-shadow: 2px 2px 2px gray;
+  color:#F0FFF0;
+  font-size:50px;
+}
+
+#top_link {
+  border:2px dashed gray;
+  background-color: #F0F8FF;
+  text-align:center;
+  width:15%;
+  display:block;
+  margin-right: auto;
+  margin-left: auto;
 }

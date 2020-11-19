@@ -1,8 +1,19 @@
-<h2 style="text-align:center; margin-bottom: 30px; font-family: 'Noto Serif', serif; text-shadow: 2px 2px 2px gray; color:#F0FFF0; font-size:50px;">Best Cocktails</h2>
-<p style='color:black'>You can see the best known cocktails below and see the details of the cocktail by clicking on a cocktail. Enjoy the ride!</p>
+<h2 id='top'>Best Cocktails for our special guest</h2>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <% @cocktails.each do |cocktail|  %>
+      <a href="<%= "##{cocktail.name.delete(' ')}" %>"><%= cocktail.name %></a>
+    <% end  %>
+  </div>
+</div>
+
+<p style='color:black'>You can see the best known cocktails below and see the details of the cocktail by clicking on a cocktail.</p>
+<p style='color:black'>Enjoy the ride!</p>
 <% @cocktails.each do |cocktail|  %>
   <div class='card' id='cockt_card'>
-    <p class='cockt_name'><%=link_to "#{cocktail.name}", cocktail_path(cocktail)%></p>
+    <p class='cockt_name' id="<%= cocktail.name.delete(' ') %>"><%=link_to "#{cocktail.name}", cocktail_path(cocktail)%></p>
     <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill,id:'cock_img' %>
     <br>
   </div>
@@ -11,5 +22,27 @@
     <p><%= link_to 'Create a new cocktail', new_cocktail_path, id:'create_para' %></p>
   </div>
 </div>
+<br>
 
+<div id='top_link'>
+  <a href='#header_id'>Top</a>
+</div>
 
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+      let i;
+      for (i = 0; i < dropdowns.length; i++) {
+        let openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>

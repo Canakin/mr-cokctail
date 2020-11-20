@@ -27,8 +27,10 @@ ingsixteen = Ingredient.create(name: "cranberry juice")
 ingseventeen = Ingredient.create(name: "peach")
 ingeightteen = Ingredient.create(name: "pineapple juice")
 ingnineteen = Ingredient.create(name: "coconut cream")
-ingtwenty = Ingredient.create(name: 'coca cola')
-ingtwentyone = Ingredient.create(name: 'whiskey')
+ingtwenty = Ingredient.create(name: "coca cola")
+ingtwentyone = Ingredient.create(name: "whiskey")
+
+puts 'ingredients created'
 
 fileone = URI.open('https://res.cloudinary.com/ds2odybte/image/upload/v1605617775/Can%20Photos/mojito_rozvpv.jpg')
 filetwo = URI.open('https://res.cloudinary.com/ds2odybte/image/upload/v1605618902/Can%20Photos/Bloody_Mary_jpg8vy.jpg')
@@ -42,6 +44,8 @@ cocktailthree = Cocktail.create(name: 'Sex on the beach')
 cocktailfour = Cocktail.create(name: 'Margarita')
 cocktailfive = Cocktail.create(name: 'Pina Colada')
 
+puts 'cocktails are created'
+
 cocktailone.photo.attach(io: fileone, filename: 'mojito_rozvpv.jpg', content_type: 'image/jpg')
 cocktailtwo.photo.attach(io: filetwo, filename: 'Bloody_Mary_jpg8vy.jpg', content_type: 'image/jpg')
 cocktailthree.photo.attach(io: filethree, filename: 'Sex_on_the_beach_zs4dtz.jpg', content_type: 'image/jpg')
@@ -51,6 +55,10 @@ cocktailfive.photo.attach(io: filefive, filename: 'Pina_Collada_fs5qch.jpg', con
 reviewone = Review.create(content: 'Very good drink', rating: 5, cocktail: cocktailone)
 reviewtwo = Review.create(content: 'Bloody Mary is awesome', rating: 4, cocktail: cocktailtwo)
 reviewthree = Review.create(content: 'One of the best', rating: 4, cocktail: cocktailthree)
+reviewfour = Review.create(content: 'Amazing drink', rating: 4, cocktail: cocktailfour)
+reviewfive = Review.create(content: 'Cool drink', rating: 4, cocktail: cocktailfive)
+
+puts 'review are created'
 
 doseone = Dose.create(description: '1 1/2 oz', ingredient: ingone, cocktail: cocktailone)
 dosetwo = Dose.create(description: '1 oz', ingredient: ingtwo, cocktail: cocktailone)
@@ -62,5 +70,10 @@ doseseven = Dose.create(description: '3 oz', ingredient: ingeight, cocktail: coc
 dosesnine = Dose.create(description: '1/2 oz', ingredient: ingseven, cocktail: cocktailtwo)
 doseten = Dose.create(description: '1 1/3 oz', ingredient: ingfourteen, cocktail: cocktailthree)
 doseleven = Dose.create(description: '2/3 oz', ingredient: ingseventeen, cocktail: cocktailthree)
+dosetwelve = Dose.create(description: '1 oz', ingredient: ingone, cocktail: cocktailfour)
+dosethirteen = Dose.create(description: '2 oz', ingredient: ingtwelve, cocktail: cocktailfour)
+dosefourteen = Dose.create(description: '1 oz volume', ingredient: ingthirteen, cocktail: cocktailfour)
+dosefifteen = Dose.create(description: '1 oz', ingredient: ingnineteen, cocktail: cocktailfive)
+doseseventeen = Dose.create(description: '1 oz', ingredient: ingeightteen, cocktail: cocktailfive)
 
 puts 'new db set'

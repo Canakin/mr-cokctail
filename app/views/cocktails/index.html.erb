@@ -7,25 +7,30 @@
       <a href="<%= "##{cocktail.name.delete(' ')}" %>"><%= cocktail.name %></a>
     <% end  %>
   </div>
+  <hr>
 </div>
 
-<p style='color:black'>You can see the best known cocktails below and see the details of the cocktail by clicking on a cocktail.</p>
-<p style='color:black'>Enjoy the ride!</p>
+<div class='card-body'>
+  <p style='color:black'>You can see the best known cocktails below and see the details of the cocktail by clicking on a cocktail.</p>
+  <p style='color:black'>Enjoy the ride!</p>
+</div>
+
+<div class='container'>
 <% @cocktails.each do |cocktail|  %>
   <div class='card' id='cockt_card'>
     <p class='cockt_name' id="<%= cocktail.name.delete(' ') %>"><%=link_to "#{cocktail.name}", cocktail_path(cocktail)%></p>
-    <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill,id:'cock_img' %>
+    <%= cl_image_tag cocktail.photo.key, height: 200, width: 300, crop: :fill,id:'cock_img' %>
     <br>
   </div>
 <% end %>
-  <div id='create_link'>
-    <p><%= link_to 'Create a new cocktail', new_cocktail_path, id:'create_para' %></p>
+  <div>
+    <p><%= link_to 'Create a new cocktail', new_cocktail_path, class:'btn btn-primary' %></p>
   </div>
 </div>
 <br>
 
 <div id='top_link'>
-  <a href='#header_id'>Top</a>
+  <a href='#header_id' class='btn btn-secondary'>Top</a>
 </div>
 
 <script>

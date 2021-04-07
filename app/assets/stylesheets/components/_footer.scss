@@ -1,24 +1,29 @@
 p {
   text-align:center;
-  margin-top:35px;
+  margin-top:20px;
+  margin-left:20px;
   color:#FAEBD7;
 }
 
 .footer {
   background-image: linear-gradient(gray, white);
   position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:25px;
+  height:100px;
 }
 
 .fa {
-  padding: 20px;
-  font-size: 40px;
+  padding: 10px;
+  font-size: 50px;
   width: 50px;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 5px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:20px;
 }
 
 .fa:hover {
@@ -33,4 +38,14 @@ p {
 .fa-twitter {
   background: #55ACEE;
   color: white;
+}
+
+.fa-instagram {
+  background: #E1306C;
+  color: white;
+}
+
+#icons {
+  margin-right:30px;
+  width:300px;
 }

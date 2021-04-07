@@ -6,25 +6,30 @@ h1 {
   padding-bottom:30px;
   text-shadow:3px 3px 3px black;
   color:#F0F8FF;
+  font-weight: bold;
+  padding-top: 20px;
 }
 
 .header {
   background-image: url('https://res.cloudinary.com/ds2odybte/image/upload/v1605616588/Can%20Photos/cocktail_header_au7rnd.jpg');
   margin-bottom:30px;
   padding-bottom:20px;
-  opacity:70%;
+  opacity:50%;
+  margin-top:0;
 }
 
 h3 {
   text-align:center;
   text-shadow:2px 2px 2px black;
   color:#F0F8FF;
+  font-weight: bold;
 }
 
 h2 {
   text-align:center;
   text-shadow:2px 2px 2px black;
   color:#F0F8FF;
+  font-weight: bold;
 }
 
 #top {
@@ -37,11 +42,10 @@ h2 {
 }
 
 #top_link {
-  border:2px dashed gray;
-  background-color: #F0F8FF;
-  text-align:center;
-  width:15%;
-  display:block;
-  margin-right: auto;
-  margin-left: auto;
+  a {
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    width:6%;
+  }
 }
